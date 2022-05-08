@@ -1,0 +1,46 @@
+<mat-card class="darkgrey;backgound: inherit">
+  <mat-card-title>Experiencia laboral</mat-card-title>
+
+<app-mh-card
+    *ngFor="let jobI of jobs"
+    [job]="jobI"
+    [logued]="logued"
+    [adm]="adm"
+    (emitDelete)="jobDelete(jobI)"
+    (emitEdit)="jobEdit(jobI)"
+    ></app-mh-card>
+</mat-card>
+<mat-card  class="darkgrey">
+  <mat-card-title>Formación y cursos</mat-card-title>
+
+<app-education-card
+*ngFor="let edu of educations"
+    [edu]="edu"
+    [logued]="logued"
+    (emitDelete)="educationDelete(edu)"
+    (emitEdit)="educationEdit(edu)"
+    ></app-education-card>
+</mat-card>
+<mat-card  class="darkgrey">
+  <mat-card-title>Hard & Soft Skills</mat-card-title>
+
+<app-skills-card
+
+[skills]="skills"
+[logued]="logued"
+(emitDeleteSkill)="skillDelete($event)"
+    ></app-skills-card>
+</mat-card>
+<mat-card  class="darkgrey">
+  <mat-card-title>Proyectos </mat-card-title>
+
+<app-proyects-card
+*ngFor="let pro of projects"
+    [prj]="pro"
+    [logued]="logued"
+    (emitDelete)="projectDelete(pro)"
+    (emitEdit)="projectEdit(pro)"
+    ></app-proyects-card>
+</mat-card>
+
+

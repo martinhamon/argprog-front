@@ -1,0 +1,6 @@
+<input type="file" name="file" (change)="onFileSelectedChange($event)" />
+<!-- button to trigger the file upload when submitted -->
+<button type="button" class="btn btn-success btn-s" (click)="onUpload()" >
+      Subir imagen
+</button>
+<div *ngIf="succes"> Subido.</div>

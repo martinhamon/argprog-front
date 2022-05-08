@@ -1,0 +1,10 @@
+.mat-card:not(.no-mat){
+
+
+  border-radius: 32px;
+  margin: 10px 10px;
+  padding: 20px;
+  border-style: groove;
+  border-width: 1px;
+  border-color: darkgrey;
+}

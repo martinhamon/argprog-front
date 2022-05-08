@@ -1,0 +1,67 @@
+<mat-card   >
+  <div class="profile-background">
+    <div class="size">
+    <img class="image-responsive" src="../../../assets/images/logo.jpg" alt="">
+  </div>
+  </div>
+    <div>
+      <div >
+        <img id="info-img"  [src]="profile.logo" alt="">
+        <mat-form-field appearance="fill">
+          <mat-label>URL de avatar </mat-label>
+          <input matInput [(ngModel)]="profile.logo">
+        </mat-form-field>
+        <br>
+      <!--app-file-uploader></app-file-uploader-->
+        <div class="all" >
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre </mat-label>
+            <input matInput [(ngModel)]="profile.name">
+          </mat-form-field> <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Apellido </mat-label>
+            <input matInput [(ngModel)]="profile.lastName">
+          </mat-form-field><br>
+          <mat-form-field appearance="fill">
+            <mat-label>Descripcion corta </mat-label>
+            <input matInput [(ngModel)]="profile.shortDescription">
+          </mat-form-field> &nbsp; <br>
+          <!--mat-form-field appearance="fill">
+            <mat-label>Descripcion general </mat-label>
+            <input matInput >
+          </mat-form-field-->
+
+          <mat-form-field  appearance="fill">
+            <mat-label>Descripcion general</mat-label>
+            <textarea matInput [(ngModel)]="profile.description"
+                      cdkTextareaAutosize
+                      #autosize="cdkTextareaAutosize"
+                      cdkAutosizeMinRows="1"
+                      cdkAutosizeMaxRows="5"></textarea>
+          </mat-form-field>
+
+          &nbsp;<br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Telefono </mat-label>
+            <input matInput [(ngModel)]="profile.telephone">
+          </mat-form-field> &nbsp;<br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Direccion </mat-label>
+            <input matInput [(ngModel)]="profile.address" >
+          </mat-form-field> &nbsp; <br>
+
+
+          <button mat-raised-button (click)="OnUpdate()">Actualizar perfil</button>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+</mat-card >

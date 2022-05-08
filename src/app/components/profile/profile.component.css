@@ -1,0 +1,129 @@
+.mat-card:not(.no-mat){
+
+
+  border-radius: 32px;
+  margin: 10px 10px;
+  padding: 20px;
+  border-style: groove;
+  border-width: 1px;
+  border-color: darkgrey;
+}
+
+.mat-card#first-card{
+  padding: 0;
+}
+.size{
+max-width: 500px;
+max-height: 312px;
+margin-left: auto;
+margin-right: auto;
+}
+div#profile-background{
+  display: flex;
+  z-index: 1;
+}
+div#profile-background img{
+  width: 100%;
+  border-radius: 32px 32px 0 0;
+}
+
+.profile-image
+{
+  border-radius: 50%;
+  width: 152px;
+  height: 152px;
+  margin-top: -110;
+  z-index: 1;
+}
+
+div#info-actions
+{
+  display: flex;
+}
+
+.info-new{
+padding: 16px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.info-data{
+margin-top: -75px;
+margin-bottom: 75px;
+}
+
+.image-responsive
+{
+  display: flex;
+  width: 100%;
+  max-height: 50%;
+  margin-left:auto ;
+  margin-right: auto;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  border-radius: 32px;
+}
+#info-img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  z-index: 2;
+  top: -75px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-right: autogit;
+  position: relative;
+
+}
+
+.info-data{
+max-width: 50%;
+margin-top: -75px;
+word-wrap: break-word
+
+}
+.mat-raised-button{
+  margin-left: 10px;
+  color: whitesmoke;
+  background-color: royalblue;
+
+}
+.mat-stroked-button{
+  margin-left: 10px;
+}
+.study-link{
+  background-image: url('../../../assets/images/ulp.png');
+  max-width: 100%;
+height: auto;
+display: inline;
+border: 5px;
+border-color: darkgrey;
+
+}
+
+.no-mat{
+    margin: auto ;
+    margin-top: 10px;
+    border-radius: 0 0 32px 32px;
+}
+.info-contact{
+max-width: 50%;
+word-break: break-all;
+}
+
+.info-tech {
+max-width: 50%;
+margin-left: 70%;
+margin-top: -75px;
+padding-right: 10px;
+
+
+word-wrap: break-word
+
+}
+.all{
+  display: grid;
+}

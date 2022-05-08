@@ -1,0 +1,30 @@
+
+
+    <mat-card class="jobs">
+      <!--mat-card-title>{{job.job_title}} </mat-card-title>
+    <mat-card-subtitle class="card-subtitle">
+      {{job.job_title}}
+     </mat-card-subtitle-->
+     <mat-card-title-group>
+      <img mat-card-sm-image  src="{{logo}}" >
+      <mat-card-title>{{title}}</mat-card-title>
+      <mat-card-subtitle>{{subTitle}}</mat-card-subtitle>
+
+    </mat-card-title-group>
+     <mat-card-content>
+      {{tasks}}
+      <br> <br>
+      Fecha ingreso: {{start | date:'dd-MM-yyyy'}} <br>
+      Fecha de egreso: {{end | date:'dd-MM-yyyy'}}
+     </mat-card-content>
+    <mat-card-actions align="end"
+    *ngIf="logued && adm"
+
+    >
+     <app-image-button [icon]="iconEdit" class="btn-edit" (click)="onEdit()"></app-image-button>
+     <app-image-button [icon]="iconDelete" class="btn-edit"
+     (click)="onDelete(job_id)"
+     ></app-image-button>
+    </mat-card-actions>
+  </mat-card>
+

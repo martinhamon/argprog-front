@@ -1,0 +1,32 @@
+<p>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+    <button mat-icon-button >
+      <img class="nav-bar-image" src="http://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1638313837/APLogo-20-20.png">
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-icon-button  >
+      <mat-icon (click)="redirecTo('https://es-la.facebook.com/')">facebook</mat-icon>
+    </button>
+    <button mat-icon-button (click)="redirecTo('https://twitter.com/?lang=es')" >
+      <img src="https://img.icons8.com/material/24/ffffff/twitter--v1.png"/>
+
+    </button>
+
+    <button mat-button *ngIf="isAuthenticated" (click)="onLogOutClick(isAuthenticated)">
+      <mat-icon>exit_to_app</mat-icon>
+      Logout
+    </button>
+    <button mat-button *ngIf="!isAuthenticated" (click)="onLogInClick(isAuthenticated)">
+      <mat-icon>exit_to_app</mat-icon>
+      LogIn
+    </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row >
+    <span>Argentina Programa -
+      #YoProgramo</span>
+
+
+  </mat-toolbar-row>
+  </mat-toolbar>
+</p>

@@ -1,0 +1,27 @@
+
+
+    <mat-card class="jobs">
+      <!--mat-card-title>{{job.job_title}} </mat-card-title>
+    <mat-card-subtitle class="card-subtitle">
+      {{job.job_title}}
+     </mat-card-subtitle-->
+     <mat-card-title-group>
+      <img mat-card-sm-image  src="{{edu_logo}}" (click)="imageOpen(edu_logo)" >
+      <mat-card-title>{{edu_title}}</mat-card-title>
+      <mat-card-subtitle>{{edu_sub_title}}</mat-card-subtitle>
+
+    </mat-card-title-group>
+     <mat-card-content>
+      {{edu_description}}
+      <br> <br>
+      Fecha ingreso: {{start | date:'dd-MM-yyyy'}}  <br>
+      Fecha de egreso:{{end | date:'dd-MM-yyyy'}}
+     </mat-card-content>
+    <mat-card-actions align="end"
+    *ngIf="logued"
+    >
+      <app-image-button [icon]="iconEdit" (click)="onEdit()" class="btn-edit"></app-image-button>
+      <app-image-button [icon]="iconDelete" (click)="onDelete()" class="btn-edit"></app-image-button>
+    </mat-card-actions>
+  </mat-card>
+

@@ -1,0 +1,20 @@
+
+<app-nav-bar
+  (LogInClick)='onClickButtonNavBarLogOutLogIn($event)'
+   (LogOutClick)='onClickButtonNavBarLogOutLogIn($event)' ></app-nav-bar>
+   <!--button mat-raised-button (click)="onSetTheme('dark-theme')">Dark Theme</button>
+<button style="margin-left: 5px;" mat-raised-button (click)="onSetTheme('light-theme')">Light Theme</button-->
+   <div id="contenedor">
+   <div class="my-dark-theme">
+      <button (click)="onSetTheme('dark-theme')"  mat-mini-fab  ></button>
+     
+     
+    </div>
+    <div class="my-light-theme"  >
+      <button (click)="onSetTheme('light-theme')" mat-mini-fab color="white"  ></button>
+    </div>
+   </div>
+   <router-outlet class="main"></router-outlet>
+
+
+

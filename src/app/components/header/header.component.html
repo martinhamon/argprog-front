@@ -1,0 +1,64 @@
+
+<mat-card class="darkgrey ; backgound: inherit">
+
+    <div class="profile-background">
+      <div class="size">
+      <img class="image-responsive" src="../../../assets/images/logo.jpg" alt="">
+    </div>
+    </div>
+      <div class="info darkgrey">
+        <div >
+          <img  id="info-img" [src]="profile.logo" alt="">
+          <!--app-image-button></app-image--->
+          <app-image-button
+          *ngIf="adm && logued"
+          (click)="onEdit()"
+
+          ></app-image-button>
+          <div class="info-data ">
+
+              <h1>{{profile.name}} {{profile.lastName}}</h1>
+              <div id="info-company"><b>{{profile.shortDescription}}</b>
+                <br>
+              <div id="info-contact">
+              <br>
+                <span>{{profile.description}} </span>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+            <div class="info-tech">
+
+
+                <!--img class="study-link" src="../../../assets/images/ulp.png" alt="ULP">
+                <p  >texto a añadir</p>
+                <h1>ULP</h1>
+                <div id="info-company">M-code</div>
+                <div id= "info-contact">
+                  <span>San Luis </span>
+                  <span><a href="#">Informacion de contacto</a></span>
+                </div-->
+
+            </div>
+      </div>
+        <mat-card *ngIf="adm && logued" class="no-mat" >
+          <button mat-raised-button  (click)="abrirDialogo('job')" >Añadir trabajo</button>
+            <button mat-raised-button  (click)="abrirDialogo('education')">Añadir educacion</button>
+            <button mat-raised-button (click)="abrirDialogo('skills')" >Añadir conocimiento</button>
+            <button mat-raised-button (click)="abrirDialogo('project')" >Añadir proyecto</button>
+        </mat-card>
+
+
+
+
+</mat-card>
+
+
+
+
+
+
+
+

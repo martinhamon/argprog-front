@@ -1,0 +1,27 @@
+<mat-card class="jobs ">
+  <mat-card-title>
+  {{prj.title}}
+  </mat-card-title>
+  <mat-card-subtitle>
+    {{prj.subTitle}}
+  </mat-card-subtitle>
+  <mat-card-content>
+    {{prj.description}}
+  </mat-card-content>
+    <mat-card-content>
+    URL referencia: <a href="{{prj.url}}">{{prj.title}}</a>
+
+
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-card-actions align="end"
+    *ngIf="logued"
+    >
+      <app-image-button [icon]="iconEdit" (click)="onEdit()" class="btn-edit"></app-image-button>
+      <app-image-button [icon]="iconDelete"  (click)="onDelete()" class="btn-edit"></app-image-button>
+     </mat-card-actions>
+  </mat-card-actions>
+
+
+
+</mat-card>

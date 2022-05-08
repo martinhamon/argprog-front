@@ -1,0 +1,50 @@
+
+<div fxLayout="row" fxLayoutAlign="center center">
+
+<mat-card >
+<form [formGroup]="form" (ngSubmit)="onLogin($event)" class="login-main">
+  <div class="mb-3">
+    <label for="userName" class="form-label">Nombre de usuario </label>
+    <input
+    [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid':!Email?.errors && Email?.touched}"
+    type="text" formControlName="userName" class="form-control" id="userName" aria-describedby="emailHelp">
+    <div *ngIf="Email?.errors && Email?.touched" class="text-danger">
+      <p *ngIf="Email?.hasError('required')" >
+
+      Nombre de usuario requerido
+      </p>
+      <p *ngIf="Email?.hasError('email')" >
+
+      Credenciales invalidas
+        </p>
+    </div>
+    <div id="emailHelp" class="form-text">Nunca compartiremos sus datos.</div>
+  </div>
+  <div class="mb-3">
+    <label for="inputPassword" class="form-label">Password</label>
+    <input
+    [ngClass]="{'is-invalid': Password?.errors && Email?.touched, 'is-valid':!Password?.errors && Email?.touched}"
+     type="password" formControlName="password" class="form-control" id="inputPassword1">
+    <div *ngIf="Password?.errors && Password?.touched" class="text-danger">
+      <p *ngIf="Password?.hasError('required')" >
+
+      Password requerido
+      </p>
+
+    </div>
+  </div>
+  <div  class="text-danger">
+    <p  >
+
+    {{error}}
+    </p>
+
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</mat-card>
+</div>

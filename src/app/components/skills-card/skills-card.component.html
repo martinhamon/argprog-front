@@ -1,0 +1,24 @@
+<mat-card class="jobs" >
+
+ <mat-card-content>
+
+  <mat-toolbar >
+    Aptitudes - Conocimientos
+  </mat-toolbar>
+  <div class="content" >
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div  fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let sk of skills">
+    <app-skill-item
+    [skill]="sk"
+    (emitDeleteItem)="onDelete($event)"
+    ></app-skill-item>
+  </div>
+</div>
+</div>
+
+ </mat-card-content>
+
+</mat-card>
+
+
+
